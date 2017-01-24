@@ -12,4 +12,20 @@ public class SortingUtil {
         }
         return a;
     }
+
+    public static int[] selectionSort(int []a){
+        for(int i=0;i<a.length-1;i++){
+            int key = a[i];
+            int index = i;
+            for(int j=i+1;j<a.length;j++){
+                if(key>a[j]){
+                    key = a[j];
+                    index = j;
+                }
+            }
+            a[index] = a[i];
+            a[i] = key;
+        }
+        return a;
+    }
 }
